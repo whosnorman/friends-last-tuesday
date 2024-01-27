@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>for structured unstructured time</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/poster.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/jquery.min.js" defer></script>
+    
+    <!-- libs -->
+    <script type="text/javascript" src="lib/decomp.js"></script>
+    <script type="text/javascript" src="lib/pathseg.js"></script>
+
+    <!-- Matter -->
+    <script src="demo/matter.js"></script>
+
+  </head>  
+    <body>
+      
+      <div>
+       <a href="index.html" class="link">Back</a>
+      </div>
+      
+      <div class="page">
+      <div class="poster">
+        <div id="canvas-container"></div>
+        <div class="svg-path">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="172px" height="172px" viewBox="-10 -10 172 172" version="1.1">
+              <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+              <title>text-path-circle</title>
+              <desc>Created with Sketch.</desc>
+              <defs/>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <path id="text-path" d="M81,161 C125.18278,161 161,125.18278 161,81 C161,36.81722 125.18278,1 81,1 C36.81722,1 1,36.81722 1,81 C1,125.18278 36.81722,161 81,161 Z M81,162 C36.2649353,162 0,125.735065 0,81 C0,36.2649353 36.2649353,0 81,0 C125.735065,0 162,36.2649353 162,81 C162,125.735065 125.735065,162 81,162 Z" id="text-path-circle" fill="none" fill-rule="nonzero"/>
+                  <text class="svg-path-text" fill="#000000" font-size="1.5rem">
+                    <textPath id="tp" xlink:href="#text-path" startOffset="0%">
+                      7PM&nbsp;&nbsp;• _• 
+                    </textPath>
+                  </text>
+              </g>
+          </svg>
+<!--           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320px" height="480px" viewBox="0 0 320 480" version="1.1">
+              <title>text-path</title>
+              <desc>Created with Sketch.</desc>
+              <defs/>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Artboard" transform="translate(-40.000000, -40.000000)" fill-rule="nonzero" stroke="none">
+                      <path xmlns="http://www.w3.org/2000/svg" d="M40.5,40.5 L40.5,519.5 L359.5,519.5 L359.5,40.5 L40.5,40.5 Z" id="text-path"/>
+                    <text fill="#000000" font-size="2rem">
+                      <textPath id="tp" xlink:href="#text-path" startOffset="0%">
+                            7PM 7PM 7PM 7PM 7PM 7PM 7PM 7PM 7PM 7PM 7PM 7PM 7PM 7PM 7PM 7PM 7PM 7PM
+                      </textPath>
+                    </text>
+                  </g>
+              </g>
+          </svg> -->
+        </div>
+          
+        
+        <!--<div class="copy">SECOND TO LAST TUESDAY</div>-->
+        
+        <div class="calendar">
+          <div class="calendar__header">
+            August 2019
+          </div>
+          <div class="calendar__cell--is-header">S</div>
+          <div class="calendar__cell--is-header">M</div>
+          <div class="calendar__cell--is-header">T</div>
+          <div class="calendar__cell--is-header">W</div>
+          <div class="calendar__cell--is-header">T</div>
+          <div class="calendar__cell--is-header">F</div>
+          <div class="calendar__cell--is-header">S</div>
+          
+          <div class="calendar__cell--is-first-blank"></div>
+          <div class="calendar__cell--is-last-tuesday">27</div>
+          <div class="calendar__cell--is-date">1</div>
+          <div class="calendar__cell--is-date">2</div>
+          <div class="calendar__cell--is-date">3</div>
+          <div class="calendar__cell--is-date">4</div>
+          <div class="calendar__cell--is-date">5</div>
+          <div class="calendar__cell--is-date">6</div>
+          <div class="calendar__cell--is-date">7</div>
+          <div class="calendar__cell--is-date calendar__cell--is-missing">8</div>
+          <div class="calendar__cell--is-date calendar__cell--is-missing">9</div>
+          <div class="calendar__cell--is-date calendar__cell--is-missing">10</div>
+          <div class="calendar__cell--is-date">11</div>
+          <div class="calendar__cell--is-date">12</div>
+          <div class="calendar__cell--is-date">13</div>
+          <div class="calendar__cell--is-date">14</div>
+          <div class="calendar__cell--is-date calendar__cell--is-missing">15</div>
+          <div class="calendar__cell--is-date calendar__cell--is-missing">16</div>
+          <div class="calendar__cell--is-date calendar__cell--is-missing">17</div>
+          <div class="calendar__cell--is-date">18</div>
+          <div class="calendar__cell--is-date">19</div>
+          <div class="calendar__cell--is-date">20</div>
+          <div class="calendar__cell--is-date">21</div>
+          <div class="calendar__cell--is-date calendar__cell--is-missing">22</div>
+          <div class="calendar__cell--is-date calendar__cell--is-missing">23</div>
+          <div class="calendar__cell--is-date calendar__cell--is-missing">24</div>
+          <div class="calendar__cell--is-date">25</div>
+          <div class="calendar__cell--is-date">26</div>
+          <div class="calendar__cell--is-date">27</div>
+          <div class="calendar__cell--is-date">28</div>
+          <div class="calendar__cell--is-date">29</div>
+          <div class="calendar__cell--is-date">30</div>
+          <div class="calendar__cell--is-date">31</div>            
+          
+        </div>
+      </div>
+    </div>
+    </body>
+    <script src="js/second-blocks.js"></script>
+    <script src="js/marquee-text.js"></script>
+  </html>

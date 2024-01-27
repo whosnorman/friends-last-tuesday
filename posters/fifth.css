@@ -1,0 +1,640 @@
+/* GENERAL */
+
+
+/*
+
+Colors for reference 
+
+background: #418DFF; 
+border-color: transparent transparent #9F53FF transparent;
+background: #FFEB3B; 
+border-bottom-color: #FF4747;
+background: #FF9B26; */
+
+html {
+	width: 100%;
+	height: 100%;
+  font-family: "Georgia", serif;
+  font-size: 10px;
+  background: lemonchiffon;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.page {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.link {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  color: black;
+  text-decoration: underline;
+  font-size: 1.75rem;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.poster {
+  width: 400px;
+  height: 560px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 2px solid black;
+  box-shadow: 20px 20px 0px rgba(0,0,0,1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+  overflow: hidden;
+}
+
+
+
+/* FIFTH POSTER */ 
+
+.container {
+  height: 100%;
+  width: 100%;
+/*   transform: rotate(90deg) translateX(-15%) translateY(3%); */
+  transform: rotate(0deg);
+  display: flex;
+  flex-direction: row;
+}
+
+
+.column {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid black;
+}
+
+.column:last-child {
+  border: 0;
+}
+
+.cell {
+  height: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 78px;
+  font-style: italic;
+  font-weight: bold;
+/*   letter-spacing: 5px; */
+  
+}
+
+.cell--has-f p, .cell--has-t p, .cell--has-l p {
+  font-size: 78px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.poster:hover {
+  cursor: none;
+}
+
+.cell:hover {
+  background: black;
+  cursor: none;
+  color: lemonchiffon;
+}
+
+.cell-4:hover, .cell-6:hover {
+  box-shadow: inset 0 0 50px 50px black;
+  cursor: none;
+  color: lemonchiffon;
+}
+
+.cell-1A {
+/*   transition: all 200ms ease-in-out; */
+  animation: grow-width 4s ease-in-out infinite;
+  height: 10%;
+  background: #FF9B26;
+}
+
+.cell-1A:after, .cell-1B:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: black;
+  bottom: 0;
+}
+
+.cell-1B {
+  height: 70%;
+  background: #FF4747;
+  animation: shrink-width 4s ease-in-out infinite;
+}
+
+.cell-1C {
+  height: 15%; /* not fully taking effect, not sure why */ 
+}
+
+
+.cell-2A {
+  animation: shrink-full 10s steps(5, start) infinite;
+/*   animation-delay: 100ms; */
+  height: 80%;
+  background: #FFEB3B;
+}
+
+.cell-2B {
+  height: 20%;
+  background: #418DFF;
+  animation: grow-full 10s steps(5, start) infinite;
+/*   animation-delay: 100ms; */
+}
+
+.cell-2A:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: black;
+  bottom: 0;
+}
+
+.cell-3A {
+/*   animation: shrink-full 10s steps(5, start) infinite; */
+/*   animation-delay: 100ms; */
+  height: 14.5%;
+  background: transparent;
+}
+
+.cell-3B {
+  height: 25%;
+  background: #FF4747;
+  animation: shrink-full-small 20s linear infinite;
+/*   animation-delay: 100ms; */
+}
+
+.cell-3C {
+  height: 25%;
+  background: #9F53FF;
+  animation: grow-full-small 20s linear infinite;
+/*   animation-delay: 100ms; */
+}
+
+.cell-3A:after, .cell-3B:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: black;
+  bottom: 0;
+}
+
+
+.column-5 {
+  width: 10%;  
+}
+
+.cell-5 {
+  height: 10%;
+  animation: move-left 1.5s linear infinite;
+}
+
+.cell-5B {
+  height: 10%;
+  animation: move-left 1.5s linear infinite;
+/*   background: #418DFF; */
+}
+.cell-5C {
+  height: 10%;
+  animation: move-left 1.5s linear infinite;
+}
+.cell-5D {
+  height: 10%;
+  animation: move-left 1.5s linear infinite;
+/*   background: #418DFF; */
+  
+}
+.cell-5E {
+  height: 10%;
+  animation: move-left 1.5s linear infinite;
+} 
+
+.cell-5:after, .cell-5A:after, .cell-5B:after, .cell-5C:after, .cell-5D:after, .cell-5E:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: black;
+  bottom: 0;
+}
+
+.column-4 {
+  width: 10%;
+}
+
+.cell-4 {
+  height: 10%;
+  animation: blink-color 10s steps(10, start) infinite;
+}
+
+.cell-4:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.cell-4:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.cell-4:nth-child(3) {
+  animation-delay: 3s;
+}
+
+.cell-4:nth-child(4) {
+  animation-delay: 4s;
+}
+
+.cell-4:nth-child(5) {
+  animation-delay: 5s;
+}
+
+.cell-4:nth-child(6) {
+  animation-delay: 6s;
+}
+
+.cell-4:nth-child(7) {
+  animation-delay: 7s;
+}
+
+.cell-4:nth-child(8) {
+  animation-delay: 8s;
+}
+
+.cell-4:nth-child(9) {
+  animation-delay: 9s;
+}
+
+.cell-4:nth-child(10) {
+  animation-delay: 10s;
+}
+
+.cell-4:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: black;
+  bottom: 0;
+}
+
+.cell--has-time {
+  font-size: 13px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  letter-spacing: 1px;
+}
+
+.cell--has-time p {
+  margin-left: 3px;
+  margin-bottom: 2px;
+}
+
+.cell--has-t p {
+  margin-left: -7px;
+}
+
+.cell--has-f p {
+  margin-left: -5px;
+}
+
+.column-6 {
+  width: 20%;
+}
+
+.cell-6 {
+  animation: blink-cascading-1 6s steps(20, start) infinite;
+}
+
+.cell-6:nth-child(4) {
+  animation: blink-cascading-2 6s steps(20, start) infinite;
+  animation-delay: 350ms;
+  height: 15%;
+}
+
+.cell-6:nth-child(1) {
+  animation-delay: 700ms;
+  height: 28%;
+}
+
+/* 100 - 14.5 - 27.5 - 28 - 15 - 15 */
+
+/* .cell-6:nth-child(3) {
+  animation-delay: 1050ms;
+} */
+
+.cell-6:nth-child(3) {
+  animation: none;
+  height: 14.5%;
+}
+
+.cell-6:nth-child(2) {
+  animation-delay: 1400ms;
+  height: 27.5%;
+}
+
+.cell-6:nth-child(5) {
+  animation: blink-cascading-2 6s steps(20, start) infinite;
+  animation-delay: 1050ms;
+  height: 15.5%;
+}
+
+
+.cell-6:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: black;
+  bottom: 0;
+}
+
+@keyframes grow-full-small {
+  0% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 86%;
+  }
+  
+  100%{
+    height: 0%;
+  }
+}
+
+@keyframes shrink-full-small {
+  0% {
+    height: 86%;
+  }
+  
+  50% {
+    height: 0%;
+  }
+  
+  100%{
+    height: 86%;
+  }
+}
+
+@keyframes grow-width {
+  0% {
+    height: 80%;
+  }
+  
+  50% {
+    height: 24%;
+  }
+  
+  100%{
+    height: 80%;
+  }
+}
+
+@keyframes shrink-width {
+  0% {
+    height: 20%;
+  }
+  
+  50% {
+    height: 76%;
+  }
+  
+  100%{
+    height: 20%;
+  }
+}
+
+@keyframes grow-full {
+  0% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  100%{
+    height: 0%;
+  }
+}
+
+@keyframes shrink-full {
+  0% {
+    height: 100%;
+  }
+  
+  50% {
+    height: 0%;
+  }
+  
+  100%{
+    height: 100%;
+  }
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateY(0);
+  }
+  
+  100%{
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes blink-color {
+  0% {
+    background: #FFEB3B;
+  }
+  
+  10% {
+    background: #FFEB3B;
+  }
+  
+  11% {
+    background: transparent;
+  }
+  
+  100% {
+    background: transparent;
+  }
+}
+
+
+@keyframes blink-cascading-1 {
+  0% {
+    background: #FFEB3B;
+  }
+  
+  2% {
+    background: #FFEB3B;
+  }
+  
+  3% {
+    background: #9F53FF; 
+  }
+  
+  5% {
+    background: #9F53FF; 
+  }
+  
+  6% {
+    background: #FF9B26;
+  }
+  
+  7% {
+    background: #FF9B26;
+  }
+  
+  8% {
+    background: #418DFF; /*blue*/
+  }
+  
+  45%{
+    background: #418DFF;
+  }
+  
+  46% {
+    background: #FFEB3B;
+  }
+  
+  48% {
+    background: #FFEB3B;
+  }
+  
+  49% {
+    background: #418DFF; 
+  }
+  
+  51% {
+    background: #418DFF; 
+  }
+  
+  53% {
+    background: #FF4747;
+  }
+  
+  54% {
+    background: #FF4747;
+  }
+  
+  55% {
+    background: #FF9B26; /*orange*/
+  }
+  
+  100% {
+    background: #FF9B26;
+  }
+}
+
+@keyframes blink-cascading-2 {
+  0% {
+    background: #FFEB3B;
+  }
+  
+  2% {
+    background: #FFEB3B;
+  }
+  
+  3% {
+    background: #FF4747; 
+  }
+  
+  5% {
+    background: #FF4747; 
+  }
+  
+  6% {
+    background: #418DFF;
+  }
+  
+  7% {
+    background: #418DFF;
+  }
+  
+  8% {
+    background: #FF9B26; /*orange*/
+  }
+  
+  45%{
+    background: #FF9B26;
+  }
+  
+  46% {
+    background: #FFEB3B;
+  }
+  
+  48% {
+    background: #FFEB3B;
+  }
+  
+  49% {
+    background: #9F53FF; /* */
+  }
+  
+  51% {
+    background: #9F53FF; 
+  }
+  
+  53% {
+    background: #FF4747;
+  }
+  
+  54% {
+    background: #FF4747;
+  }
+  
+  55% {
+    background: #418DFF; /*blue*/
+  }
+  
+  100% {
+    background: #418DFF;
+  }
+}
+
+
+
+
+/* Media queries 4 life */
+@media only screen and (max-device-width: 600px) {
+  
+  .poster {
+    width: 320px;
+    height: 445px; /* should be 448 but there was a 1px gap after the bottom image */ 
+    box-shadow: 10px 10px 0px rgba(0,0,0,1);
+  }
+  
+  p {
+    font-size: 10px;
+  }
+  
+  .cell--has-f p, .cell--has-t p, .cell--has-l p {
+    font-size: 62px;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+}
