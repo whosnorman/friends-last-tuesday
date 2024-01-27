@@ -1,0 +1,153 @@
+/* GENERAL */
+
+html {
+	width: 100%;
+	height: 100%;
+  font-family: "Helvetica", arial, sans-serif;
+  font-size: 10px;
+  background: lemonchiffon;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.page {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.link {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  color: black;
+  text-decoration: underline;
+  font-size: 1.75rem;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.poster {
+  width: 400px;
+  height: 560px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+/*   background: #12110f; */
+	border: 2px solid black;
+  box-shadow: 20px 20px 0px rgba(0,0,0,1);
+  display: flex;
+  justify-content: center;
+}
+
+.svg-path {
+  position: absolute;
+  align-self: top;
+  margin-left: -50%;
+  margin-top: 40px;
+}
+
+.svg-path-text {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.copy {
+	font-size: 2rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	line-height: 1.8;
+}
+
+
+/* CALENDAR */
+
+.calendar {
+  position: absolute;
+  width: 70%;
+  left: 10%;
+  height: 40%;
+  font-size: 1.75rem;
+  border: 2px solid black;
+  
+  display: grid;
+  grid-template-columns: repeat(7, 14.3%);
+  grid-template-rows: 5%, 5%, repeat(5, 15%);
+  grid-gap: 0;
+  
+  align-self: flex-end;
+  margin-top: -4rem;
+}
+
+.calendar__header {
+  position: relative;
+  padding: 0.8rem 1rem 1.2rem 1.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: black;
+  color: lemonchiffon;
+  grid-column: 1 / 8;
+  display: flex;
+  align-items: center
+}
+
+.calendar__cell--is-header {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar__cell--is-date {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar__cell--is-missing {
+  background: black;
+}
+
+.calendar__cell--is-first-blank {
+  grid-column: 1 / 4;
+}
+
+.calendar__cell--is-last-tuesday {
+  grid-column: 3 / 4;
+  grid-row: 7 / 8;
+  text-align: center;
+  
+  background: #fe9c2d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  box-shadow: 10px 10px 0px rgba(0,0,0,1);
+  border: 2px solid black;
+  
+  transform: translate(-10px, -10px);
+}
+
+/* FLOATING BLOCKS */ 
+
+#canvas-container {
+  z-index: 100;
+}
+

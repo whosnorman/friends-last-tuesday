@@ -1,0 +1,156 @@
+/* GENERAL */
+
+
+/*
+
+Colors for reference 
+
+background: #418DFF; 
+border-color: transparent transparent #9F53FF transparent;
+background: #FFEB3B; 
+border-bottom-color: #FF4747;
+background: #FF9B26; */
+
+html {
+	width: 100%;
+	height: 100%;
+  font-family: "Georgia", serif;
+  font-size: 10px;
+  background: lemonchiffon;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.page {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.link {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  color: black;
+  text-decoration: underline;
+  font-size: 1.75rem;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.poster {
+  width: 400px;
+  height: 560px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 2px solid black;
+  box-shadow: 20px 20px 0px rgba(0,0,0,1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+  overflow: hidden;
+}
+
+
+
+
+
+/* SIXTH POSTER */ 
+
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  cursor: vertical-text;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.container:hover .friendly-link {
+  text-decoration: none;
+}
+
+.container-child {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.container-footer {
+  position: absolute;
+  width: calc(100% - 6rem);
+  height: auto;
+  bottom: 0;
+  padding: 3rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-family: monospace;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  pointer-events: none;
+  -webkit-text-stroke: 1px lemonchiffron solid;
+}
+
+
+.friendly-link {
+  max-width: 100%;
+  font-size: 3.4rem;
+  font-family: monospace;
+  color: black;
+  padding: 3rem;
+  word-break: break-all;
+  position: absolute;
+  text-decoration: #FFEB3B solid underline;
+  -webkit-text-decoration: #FFEB3B solid underline;
+  pointer-events: none;
+}
+
+/* .friendly-black-hole {
+  height: 5px;
+  width: 10px;
+  background: black;
+  border: 1px solid black;
+  
+  border-radius: 100%;
+  position: absolute;
+  top: 71%;
+  left: calc(50% - 2.5px);
+} */
+
+
+
+
+
+
+/* Media queries 4 life */
+@media only screen and (max-device-width: 600px) {
+  
+  .poster {
+    width: 320px;
+    height: 445px; /* should be 448 but there was a 1px gap after the bottom image */ 
+    box-shadow: 10px 10px 0px rgba(0,0,0,1);
+  }
+  
+  p {
+    font-size: 10px;
+  }
+  
+  .friendly-link {
+    font-size: 2.8rem;
+  }
+  
+  .container-footer {
+    letter-spacing: 0;
+    font-size: 120%;
+  }
+
+}
